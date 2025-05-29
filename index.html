@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GymFuel - Premium Supplements</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-slide {
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero-bg-1 {
+      background-image: url("images/hero-banner-1.jpg");
+    }
+    .hero-bg-2 {
+      background-image: url("images/hero-banner-2.jpg");
+    }
+    .hero-bg-3 {
+      background-image: url("images/hero-banner-3.jpg");
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand me-4" href="index.html">GymFuel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button">Categories</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="category.html?cat=protein">Protein</a></li>
+            <li><a class="dropdown-item" href="category.html?cat=preworkout">Pre-Workout</a></li>
+            <li><a class="dropdown-item" href="category.html?cat=amino">Amino Acids</a></li>
+            <li><a class="dropdown-item" href="category.html?cat=creatine">Creatine</a></li>
+            <li><a class="dropdown-item" href="category.html?cat=vitamins">Vitamins</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="search-bar me-3" id="searchBar">
+        <input type="text" class="form-control" id="searchInput" placeholder="Search supplements..." />
+        <div class="search-results" id="searchResults"></div>
+      </div>
+      <a href="#" class="nav-link icon-link me-3"><i class="fas fa-heart"></i></a>
+      <a href="#" class="nav-link icon-link me-3"><i class="fas fa-shopping-cart"></i></a>
+      <a href="#" class="nav-link icon-link" id="searchIcon"><i class="fas fa-search"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active hero-slide hero-bg-1">
+      <div class="container text-center text-white d-flex align-items-center justify-content-center flex-column h-100">
+        <h1 class="display-4 fw-bold">Fuel Your Gains</h1>
+        <p class="lead">Premium supplements for maximum performance</p>
+        <a href="products.html" class="btn btn-primary btn-lg px-5 py-3">Shop Now</a>
+      </div>
+    </div>
+    <div class="carousel-item hero-slide hero-bg-2">
+      <div class="container text-center text-white d-flex align-items-center justify-content-center flex-column h-100">
+        <h1 class="display-4 fw-bold">Summer Sale</h1>
+        <p class="lead">Up to 40% off on selected items this week!</p>
+        <a href="products.html" class="btn btn-danger btn-lg px-5 py-3">Explore Deals</a>
+      </div>
+    </div>
+    <div class="carousel-item hero-slide hero-bg-3">
+      <div class="container text-center text-white d-flex align-items-center justify-content-center flex-column h-100">
+        <h1 class="display-4 fw-bold">New Whey Protein</h1>
+        <p class="lead">The cleanest protein with 24g per serving</p>
+        <a href="product-detail.html?id=whey-premium" class="btn btn-light btn-lg px-5 py-3 text-dark">View Product</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
+<!-- Remaining Sections (unchanged) -->
+<!-- Your full page content like Categories, Deals, Products, Newsletter, Footer etc. remains here -->
+  <!-- Categories Section -->
+  <section class="py-5 category-section">
+    <div class="container text-center">
+      <h2 class="mb-5 fw-bold">Shop by Category</h2>
+      <div class="row g-4 justify-content-center">
+  
+        <!-- Protein -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="category-card">
+            <img src="images/protein.jpg" alt="Protein" class="img-fluid rounded-circle">
+            <div class="overlay">
+              <i class="fas fa-link"></i>
+              <span>Protein</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Pre-Workout -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="category-card">
+            <img src="images/preworkout.jpg" alt="Pre-Workout" class="img-fluid rounded-circle">
+            <div class="overlay">
+              <i class="fas fa-link"></i>
+              <span>Pre-Workout</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Creatine -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="category-card">
+            <img src="images/creatine.jpg" alt="Creatine" class="img-fluid rounded-circle">
+            <div class="overlay">
+              <i class="fas fa-link"></i>
+              <span>Creatine</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Amino Acids -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="category-card">
+            <img src="images/amino.jpg" alt="Amino Acids" class="img-fluid rounded-circle">
+            <div class="overlay">
+              <i class="fas fa-link"></i>
+              <span>Amino Acids</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Vitamins -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="category-card">
+            <img src="images/vitamins.jpg" alt="Vitamins" class="img-fluid rounded-circle">
+            <div class="overlay">
+              <i class="fas fa-link"></i>
+              <span>Vitamins</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Accessories -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="category-card">
+            <img src="images/accessories.jpg" alt="Accessories" class="img-fluid rounded-circle">
+            <div class="overlay">
+              <i class="fas fa-link"></i>
+              <span>Accessories</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Today's Best Deals Section -->
+  <section class="py-5 best-deals-section text-white">
+    <div class="container text-center mb-5">
+      <h2 class="fw-bold">Best Selling Protein Powders</h2>
+      <p class="lead mb-3">Starting from <strong>₹1999</strong></p>
+      <a href="category.html?cat=protein" class="btn btn-outline-light px-4 py-2">View All Proteins</a>
+    </div>
+  
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Deal 1 -->
+        <div class="col-md-4">
+          <div class="deal-card" style="background-image: url('images/whey-protein.jpg');">
+            <div class="deal-overlay">
+              <h4>Whey Gold Standard</h4>
+              <p>₹4600</p>
+              <a href="product-detail.html?id=whey-gold" class="btn btn-sm btn-primary mt-2">View Details</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Deal 2 -->
+        <div class="col-md-4">
+          <div class="deal-card" style="background-image: url('images/plant-protein.jpg');">
+            <div class="deal-overlay">
+              <h4>Plant Protein</h4>
+              <p>₹2999</p>
+              <a href="product-detail.html?id=plant-protein" class="btn btn-sm btn-primary mt-2">View Details</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Deal 3 -->
+        <div class="col-md-4">
+          <div class="deal-card" style="background-image: url('images/casein-protein.jpg');">
+            <div class="deal-overlay">
+              <h4>Casein Protein</h4>
+              <p>₹3799</p>
+              <a href="product-detail.html?id=casein-protein" class="btn btn-sm btn-primary mt-2">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Products Section -->
+  <section class="py-5 popular-products">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Popular Products</h2>
+      <div class="row g-4">
+  
+        <!-- Product Card 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="images/preworkout-1.jpg" class="card-img-top" alt="Pre-Workout Extreme">
+            <div class="card-body">
+              <h5 class="card-title">Pre-Workout Extreme</h5>
+              <p class="card-text">Maximum energy and focus for intense workouts.</p>
+              <p class="price fw-bold">₹2499</p>
+              <div class="d-flex justify-content-between">
+                <a href="product-detail.html?id=preworkout-extreme" class="btn btn-sm btn-outline-primary">View Details</a>
+                <a href="#" class="btn btn-sm btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Product Card 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="images/creatine-monohydrate.jpg" class="card-img-top" alt="Creatine Monohydrate">
+            <div class="card-body">
+              <h5 class="card-title">Creatine Monohydrate</h5>
+              <p class="card-text">Pure creatine for strength and power.</p>
+              <p class="price fw-bold">₹1299</p>
+              <div class="d-flex justify-content-between">
+                <a href="product-detail.html?id=creatine-mono" class="btn btn-sm btn-outline-primary">View Details</a>
+                <a href="#" class="btn btn-sm btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Product Card 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="images/bcaa.jpg" class="card-img-top" alt="BCAA 2:1:1">
+            <div class="card-body">
+              <h5 class="card-title">BCAA 2:1:1</h5>
+              <p class="card-text">Essential amino acids for muscle recovery.</p>
+              <p class="price fw-bold">₹1799</p>
+              <div class="d-flex justify-content-between">
+                <a href="product-detail.html?id=bcaa-211" class="btn btn-sm btn-outline-primary">View Details</a>
+                <a href="#" class="btn btn-sm btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Product Card 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="images/multivitamin.jpg" class="card-img-top" alt="Men's Multivitamin">
+            <div class="card-body">
+              <h5 class="card-title">Men's Multivitamin</h5>
+              <p class="card-text">Complete daily nutrition for active men.</p>
+              <p class="price fw-bold">₹999</p>
+              <div class="d-flex justify-content-between">
+                <a href="product-detail.html?id=multivitamin-men" class="btn btn-sm btn-outline-primary">View Details</a>
+                <a href="#" class="btn btn-sm btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-5 bg-light features-section">
+    <div class="container">
+      <div class="row text-center g-4">
+        
+        <!-- Feature 1 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-box">
+            <i class="fas fa-truck fa-2x mb-3 text-primary"></i>
+            <h5>Free Shipping</h5>
+            <p class="text-muted">On all orders over ₹3000</p>
+          </div>
+        </div>
+  
+        <!-- Feature 2 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-box">
+            <i class="fas fa-lock fa-2x mb-3 text-primary"></i>
+            <h5>Secure Payment</h5>
+            <p class="text-muted">100% secure transactions</p>
+          </div>
+        </div>
+  
+        <!-- Feature 3 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-box">
+            <i class="fas fa-headset fa-2x mb-3 text-primary"></i>
+            <h5>24/7 Support</h5>
+            <p class="text-muted">Expert supplement advice</p>
+          </div>
+        </div>
+  
+        <!-- Feature 4 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-box">
+            <i class="fas fa-redo-alt fa-2x mb-3 text-primary"></i>
+            <h5>Easy Returns</h5>
+            <p class="text-muted">15-day hassle-free returns</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section py-5">
+    <div class="container">
+      <div class="row align-items-center text-white">
+        
+        <!-- Left Content -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2 class="fw-bold">Join Our Fitness Community</h2>
+          <p class="lead">Get exclusive deals, workout tips, and supplement guides directly to your inbox.</p>
+        </div>
+  
+        <!-- Right Form -->
+        <div class="col-md-6">
+          <form class="row g-2">
+            <div class="col-8">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Brand / About -->
+        <div class="col-md-4">
+          <h5 class="mb-3">GymFuel</h5>
+          <p>Premium supplements for athletes and fitness enthusiasts. Fuel your performance with science-backed formulas.</p>
+        </div>
+  
+        <!-- Links -->
+        <div class="col-md-4">
+          <h6 class="mb-3">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="products.html" class="text-white text-decoration-none">Products</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Social -->
+        <div class="col-md-4">
+          <h6 class="mb-3">Follow Us</h6>
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+          <div class="mt-3">
+            <h6 class="mb-2">Customer Care</h6>
+            <p><i class="fas fa-phone me-2"></i> +91 8791935796</p>
+            <p><i class="fas fa-envelope me-2"></i> Haseenrajput066@gmail.com</p>
+          </div>
+        </div>
+      </div>
+  
+      <hr class="border-top border-secondary my-4">
+  
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 GymFuel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>

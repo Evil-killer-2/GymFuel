@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - GymFuel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand me-4" href="index.html">GymFuel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown">Categories</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="category.html?cat=protein">Protein</a></li>
+            <li><a class="dropdown-item" href="category.html?cat=preworkout">Pre-Workout</a></li>
+            <li><a class="dropdown-item" href="category.html?cat=amino">Amino Acids</a></li>
+            <li><a class="dropdown-item" href="category.html?cat=creatine">Creatine</a></li>
+            <li><a class="dropdown-item" href="category.html?cat=vitamins">Vitamins</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="search-bar me-3" id="searchBar">
+        <input type="text" class="form-control" id="searchInput" placeholder="Search supplements...">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+      <a href="#" class="nav-link icon-link me-3"><i class="fas fa-heart"></i></a>
+      <a href="#" class="nav-link icon-link me-3"><i class="fas fa-shopping-cart"></i></a>
+      <a href="#" class="nav-link icon-link" id="searchIcon"><i class="fas fa-search"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- About Hero -->
+<section class="about-hero py-5 text-white" style="background-color:#222;">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold mb-4">About GymFuel</h1>
+    <p class="lead">Fueling your fitness journey with premium supplements</p>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="images/about-story.jpg" alt="Our Story" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-4">Our Story</h2>
+        <p>Founded in 2020, GymFuel began with a mission: to provide athletes and fitness enthusiasts with high-quality, scientifically-backed supplements that work.</p>
+        <p>We set out to change the supplement industry by creating a line of honest, effective, and transparent products made with premium ingredients.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Mission -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+        <img src="images/about-mission.jpg" alt="Our Mission" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <h2 class="fw-bold mb-4">Our Mission</h2>
+        <p>Our mission is to empower fitness enthusiasts with supplements that enhance performance, recovery, and health.</p>
+        <ul>
+          <li>Premium ingredients</li>
+          <li>Scientific transparency</li>
+          <li>Innovative formulas</li>
+          <li>Trusted by athletes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <h2 class="fw-bold">Why Choose GymFuel?</h2>
+        <p class="lead">The advantages of premium supplementation</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-center p-4 shadow-sm">
+          <i class="fas fa-dumbbell fa-2x mb-3 text-primary"></i>
+          <h5>Enhanced Performance</h5>
+          <p>Break through plateaus with our performance-driven formulas.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center p-4 shadow-sm">
+          <i class="fas fa-heartbeat fa-2x mb-3 text-danger"></i>
+          <h5>Faster Recovery</h5>
+          <p>Repair muscles faster and get back in the gym sooner.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center p-4 shadow-sm">
+          <i class="fas fa-apple-alt fa-2x mb-3 text-success"></i>
+          <h5>Clean Nutrition</h5>
+          <p>No fillers. No gimmicks. Just clean, effective ingredients.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <h2 class="fw-bold">Meet Our Team</h2>
+        <p class="lead">Experts committed to your fitness success</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="images/team1.jpg" class="card-img-top" alt="GYM FUEL">
+          <div class="card-body">
+            <h5 class="card-title">GYM FUEL</h5>
+            <p class="text-muted">Founder & CEO</p>
+            <p>15+ years in competitive bodybuilding and nutrition science.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="images/team2.jpg" class="card-img-top" alt="Priya Sharma">
+          <div class="card-body">
+            <h5 class="card-title">Priya Sharma</h5>
+            <p class="text-muted">Head Nutritionist</p>
+            <p>Clinical dietitian with a focus on sports performance and recovery.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="images/team3.jpg" class="card-img-top" alt="Aman Patel">
+          <div class="card-body">
+            <h5 class="card-title">Aman Patel</h5>
+            <p class="text-muted">Product Developer</p>
+            <p>Biochemist and expert in supplement formulation and R&D.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
